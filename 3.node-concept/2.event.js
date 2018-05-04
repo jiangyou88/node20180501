@@ -1,0 +1,18 @@
+console.log(1);
+console.log(2);
+setTimeout(function(){
+    console.log(3)
+    setTimeout(function(){
+        console.log(6);
+    })
+},0);
+setTimeout(function(){
+    console.log(4);
+    setTimeout(function(){
+        console.log(7);
+    })
+},0);
+console.log(5);
+//1,2,5,3,4,6
+//成功的时间
+//当触发回到函数时，会将回调函数放到队列中
